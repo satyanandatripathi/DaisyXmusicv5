@@ -163,7 +163,7 @@ async def playlist(client, message):
 # ============================= Settings =========================================
 
 
-def updated_stats(chat, queue, vol=100):
+def updated_stats(chat, queue, vol=150):
     if chat.id in callsmusic.pytgcalls.active_calls:
         # if chat.id in active_chats:
         stats = "Settings of **{}**".format(chat.title)
