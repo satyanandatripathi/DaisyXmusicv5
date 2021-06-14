@@ -139,7 +139,7 @@ async def playlist(client, message):
         return    
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text("Player is idle")
+        await message.reply_text("ℙ𝕝𝕒𝕪𝕖𝕣 𝕚𝕤 𝕚𝕕𝕝𝕖")
     temp = []
     for t in queue:
         temp.append(t)
@@ -169,10 +169,10 @@ def updated_stats(chat, queue, vol=150):
         stats = "Settings of **{}**".format(chat.title)
         if len(que) > 0:
             stats += "\n\n"
-            stats += "Volume : {}%\n".format(vol)
-            stats += "Songs in queue : `{}`\n".format(len(que))
-            stats += "Now Playing : **{}**\n".format(queue[0][0])
-            stats += "Requested by : {}".format(queue[0][1].mention)
+            stats += "𝕍𝕠𝕝𝕦𝕞𝕖 : {}%\n".format(vol)
+            stats += "𝕊𝕠𝕟𝕘𝕤 𝕚𝕟 𝕢𝕦𝕖𝕦𝕖 : `{}`\n".format(len(que))
+            stats += "ℕ𝕠𝕨 ℙ𝕝𝕒𝕪𝕚𝕟𝕘 : **{}**\n".format(queue[0][0])
+            stats += "ℝ𝕖𝕢𝕦𝕖𝕤𝕥𝕖𝕕 𝕓𝕪 : {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -186,9 +186,9 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
+                InlineKeyboardButton("⏹", "𝕝𝕖𝕒𝕧𝕖"),
                 InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
+                InlineKeyboardButton("▶", "resume"),
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
@@ -209,14 +209,14 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)
     else:
-        await message.reply("No VC instances running in this chat")
+        await message.reply("ℕ𝕠 𝕧𝕠𝕚𝕔𝕖 𝕔𝕙𝕒𝕥 𝕗𝕠𝕦𝕟𝕕 , 𝕥𝕦𝕣𝕟 𝕧𝕠𝕚𝕔𝕖 𝕔𝕙𝕒𝕥 𝕠𝕟 𝕗𝕚𝕣𝕤𝕥 𝕟𝕠𝕠𝕓")
 
 
 @Client.on_message(filters.command("player") & filters.group & ~filters.edited)
 @authorized_users_only
 async def settings(client, message):
     if message.chat.id in DISABLED_GROUPS:
-        await message.reply("Music Player is Disabled")
+        await message.reply("𝕄𝕦𝕤𝕚𝕔 𝕡𝕝𝕒𝕪𝕖𝕣 𝕚𝕤 𝕕𝕚𝕤𝕒𝕓𝕝𝕖𝕕 𝕟𝕠𝕠𝕓")
         return    
     playing = None
     chat_id = get_chat_id(message.chat)
@@ -231,7 +231,7 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
-        await message.reply("No VC instances running in this chat")
+        await message.reply("𝕧𝕠𝕚𝕔𝕖 𝕔𝕙𝕒𝕥 Isn't 𝕒𝕔𝕥𝕚𝕧𝕖 𝕥𝕦𝕣𝕟 𝕧𝕠𝕚𝕔𝕖 𝕔𝕙𝕒𝕥 𝕠𝕟 𝕗𝕚𝕣𝕤𝕥 𝕟𝕠𝕠𝕓")
 
 
 @Client.on_message(
@@ -246,7 +246,7 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "𝕀 𝕠𝕟𝕝𝕪 𝕣𝕖𝕔𝕠𝕘𝕟𝕚𝕫𝕖 `/musicplayer on` 𝔸𝕟𝕕 `/musicplayer off` 𝕆𝕟𝕝𝕪"
         )
         return
     status = message.text.split(None, 1)[1]
@@ -254,26 +254,26 @@ async def hfmm(_, message):
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`Processing...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("Music Player Already Activated In This Chat")
+            await lel.edit("𝕄𝕦𝕤𝕚𝕔 𝕡𝕝𝕒𝕪𝕖𝕣 𝕚𝕤 𝕒𝕝𝕣𝕖𝕒𝕕𝕪 𝕒𝕔𝕥𝕚𝕧𝕖 𝕙𝕖𝕣𝕖 𝕟𝕠𝕠𝕓")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Enabled For Users In The Chat {message.chat.id}"
+            f"𝕄𝕦𝕤𝕚𝕔 ℙ𝕝𝕒𝕪𝕖𝕣 𝕊𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪 𝔼𝕟𝕒𝕓𝕝𝕖𝕕 𝔽𝕠𝕣 𝕟𝕠𝕠𝕓𝕤 𝕀𝕟 𝕋𝕙𝕖 ℂ𝕙𝕒𝕥 {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await message.reply("`Processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("Music Player Already turned off In This Chat")
+            await lel.edit("𝕄𝕦𝕤𝕚𝕔 𝕡𝕝𝕒𝕪𝕖𝕣 𝕚𝕤 𝕒𝕝𝕣𝕖𝕒𝕕𝕪 𝕠𝕗𝕗 𝕟𝕠𝕠𝕓")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"Music Player Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"𝕄𝕦𝕤𝕚𝕔 ℙ𝕝𝕒𝕪𝕖𝕣 𝕊𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪 𝔻𝕚𝕤𝕒𝕓𝕝𝕖𝕕 𝔽𝕠𝕣 𝕟𝕠𝕠𝕓𝕤 𝕀𝕟 𝕋𝕙𝕖 ℂ𝕙𝕒𝕥 {message.chat.id}"
         )
     else:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "𝕀 𝕠𝕟𝕝𝕪 𝕣𝕖𝕔𝕠𝕘𝕟𝕚𝕫𝕖 `/musicplayer on` 𝔸𝕟𝕕 `/musicplayer off` 𝕆𝕟𝕝𝕪"
         )    
         
 
@@ -288,13 +288,13 @@ async def p_cb(b, cb):
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("Player is idle")
+            await cb.message.edit("ℙ𝕝𝕒𝕪𝕖𝕣 𝕚𝕤 𝕚𝕕𝕝𝕖 𝕦 𝕟𝕠𝕠𝕓")
         temp = []
         for t in queue:
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**ℕ𝕠𝕨 ℙ𝕝𝕒𝕪𝕚𝕟𝕘** 𝕚𝕟 {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
         msg += "\n- Req by " + by
         temp.pop(0)
