@@ -25,18 +25,18 @@ async def bye(client, message):
     sent=0
     failed=0
     if message.from_user.id in SUDO_USERS:
-        lol = await message.reply("Starting Gcast")
+        lol = await message.reply("𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘 𝔾𝕔𝕒𝕤𝕥")
         if not message.reply_to_message:
-            await lol.edit("Reply to any text message to gcast sir")
+            await lol.edit("ℝ𝕖𝕡𝕝𝕪 𝕥𝕠 𝕒𝕟𝕪 𝕥𝕖𝕩𝕥 𝕞𝕖𝕤𝕤𝕒𝕘𝕖 𝕥𝕠 𝕘𝕔𝕒𝕤𝕥 ℕ𝕠𝕠𝕓")
             return
         msg = message.reply_to_message.text
         async for dialog in client.iter_dialogs():
             try:
                 await client.send_message(dialog.chat.id, msg)
                 sent = sent+1
-                await lol.edit(f"Gcasting.. Sent: {sent} chats. Failed: {failed} chats.")
+                await lol.edit(f"𝔾𝕔𝕒𝕤𝕥𝕚𝕟𝕘.. 𝕊𝕖𝕟𝕥: {sent} 𝕔𝕙𝕒𝕥𝕤. 𝔽𝕒𝕚𝕝𝕖𝕕: {failed} 𝕔𝕙𝕒𝕥𝕤.")
             except:
                 failed=failed+1
-                await lol.edit(f"Gcasting.. Sent: {sent} chats. Failed: {failed} chats.")
+                await lol.edit(f"𝔾𝕔𝕒𝕤𝕥𝕚𝕟𝕘.. 𝕊𝕖𝕟𝕥: {sent} 𝕔𝕙𝕒𝕥𝕤. 𝔽𝕒𝕚𝕝𝕖𝕕: {failed} 𝕔𝕙𝕒𝕥𝕤.")
             await asyncio.sleep(3)
-        await message.reply_text(f"Gcasted message to {sent} chats. Failed {failed} chats.")
+        await message.reply_text(f"𝔾𝕔𝕒𝕤𝕥𝕖𝕕 𝕞𝕖𝕤𝕤𝕒𝕘𝕖 𝕥𝕠 {sent} 𝕔𝕙𝕒𝕥𝕤. 𝔽𝕒𝕚𝕝𝕖𝕕 {failed} 𝕔𝕙𝕒𝕥𝕤.")
