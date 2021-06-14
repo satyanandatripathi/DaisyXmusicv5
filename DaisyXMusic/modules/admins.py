@@ -37,7 +37,7 @@ async def update_admin(client, message: Message):
             for member in await message.chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("❇️ Admin cache refreshed!")
+    await message.reply_text("🐿️ 𝔻𝕠𝕟𝕖 𝕀 𝕙𝕒𝕧𝕖 𝕣𝕖𝕝𝕠𝕒𝕕𝕖𝕕 𝕒𝕕𝕞𝕚𝕟 𝕝𝕚𝕤𝕥")
 
 
 @Client.on_message(command("pause") & other_filters)
@@ -51,7 +51,7 @@ async def pause(_, message: Message):
         await message.reply_text("❗ Nothing is playing!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ Paused!")
+        await message.reply_text("⨳ℙ𝕒𝕦𝕤𝕖𝕕!⨳")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -62,10 +62,10 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ Nothing is paused!")
+        await message.reply_text("𝔸𝕣𝕖 𝕪𝕠𝕦 𝕞𝕒𝕕 𝕠𝕣 𝕤𝕠𝕞𝕖𝕥𝕙𝕚𝕟𝕘? ℕ𝕠𝕥𝕙𝕚𝕟𝕘 𝕚𝕤 𝕡𝕒𝕦𝕤𝕖𝕕!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("✇ℝ𝕖𝕤𝕦𝕞𝕖𝕕 𝕊𝕥𝕣𝕖𝕒𝕞𝕚𝕟𝕘✇")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -74,7 +74,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("✞𝕋𝕙𝕖𝕣𝕖 𝕟𝕠𝕥𝕙𝕚𝕟𝕘 𝕚𝕟 𝕤𝕥𝕣𝕖𝕒𝕞𝕚𝕟𝕘✞")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -82,7 +82,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("♱𝕀'𝕧𝕖 𝕤𝕥𝕠𝕡𝕡𝕖𝕕 𝕤𝕥𝕣𝕖𝕒𝕞𝕚𝕟𝕘♱")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -92,7 +92,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("☨𝕀𝕤 𝕥𝕙𝕖𝕣𝕖 𝕒𝕟𝕪𝕥𝕙𝕚𝕟𝕘 𝕥𝕠 𝕤𝕜𝕚𝕡 ?? ℝ𝕖𝕒𝕝𝕝𝕪?☨")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -108,7 +108,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**")
+    await message.reply_text(f"- 𝕊𝕜𝕚𝕡𝕡𝕖𝕕 **{skip[0]}**\n- ℕ𝕠𝕨 ℙ𝕝𝕒𝕪𝕚𝕟𝕘 **{qeue[0][0]}**")
 
 
 @Client.on_message(filters.command("admincache"))
@@ -121,4 +121,4 @@ async def admincache(client, message: Message):
             for member in await message.chat.get_members(filter="administrators")
         ],
     )
-    await message.reply_text("❇️ Admin cache refreshed!")
+    await message.reply_text("𝕀'𝕕 𝕣𝕖𝕗𝕣𝕖𝕤𝕙𝕖𝕕 𝕞𝕪 𝕒𝕕𝕞𝕚𝕟 𝕔𝕒𝕔𝕙𝕖")
