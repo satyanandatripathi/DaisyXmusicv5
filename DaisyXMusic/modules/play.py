@@ -675,14 +675,14 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                        InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                        InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
+                        InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
                     ],
                     [
-                        InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                        InlineKeyboardButton(text="𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
+                        InlineKeyboardButton(text="𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
                 ]
             )
             requested_by = message.from_user.first_name
@@ -823,14 +823,14 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
+                InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
             ],
             [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
+                InlineKeyboardButton(text="𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
     )
     requested_by = message.from_user.first_name
@@ -966,11 +966,11 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
+                InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Listen On Deezer 🎬", url=f"{url}")],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="", url=f"{url}")],
+            [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -1102,15 +1102,15 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
+                InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
             ],
             [
                 InlineKeyboardButton(
-                    text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
+                    text="𝕁𝕠𝕚𝕟 𝕌𝕡𝕕𝕒𝕥𝕖𝕤 ℂ𝕙𝕒𝕟𝕟𝕖𝕝", url=f"https://t.me/{updateschannel}"
                 )
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(slink))
@@ -1208,14 +1208,14 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
+                InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
             ],
             [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
+                InlineKeyboardButton(text="𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ 𝕔𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
     )
     requested_by = useer_name
