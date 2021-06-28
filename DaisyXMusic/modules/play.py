@@ -1214,7 +1214,6 @@ async def lol_cb(b, cb):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
-                InlineKeyboardButton("⚰️𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine"),
             ],
             [
                 InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
