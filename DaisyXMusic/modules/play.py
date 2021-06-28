@@ -970,7 +970,7 @@ async def deezer(client: Client, message_: Message):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
-                InlineKeyboardButton("⚰️𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine),
+
             ],
             [InlineKeyboardButton(text="", url=f"{url}")],
             [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
