@@ -677,6 +677,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                         InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
+                        InlineKeyboardButton("𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine"),
                     ],
                     [
                         InlineKeyboardButton(text="𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
@@ -829,6 +830,7 @@ async def ytplay(_, message: Message):
             [
                 InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
                 InlineKeyboardButton(text="𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="𝕆𝕨𝕟𝕖𝕣", url="https://t.me/mrdark_genuine"),
             ],
             [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
@@ -968,6 +970,7 @@ async def deezer(client: Client, message_: Message):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("⚰️𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine),
             ],
             [InlineKeyboardButton(text="", url=f"{url}")],
             [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
@@ -1104,6 +1107,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("⚰️ 𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine"),
             ],
             [
                 InlineKeyboardButton(
@@ -1210,6 +1214,7 @@ async def lol_cb(b, cb):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("⚰️𝕆𝕨𝕟𝕖𝕣", url="http://t.me/mrdark_genuine"),
             ],
             [
                 InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
