@@ -15,7 +15,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from pyrogram import filters
+from pyrogram import Client, filters
 import asyncio
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
