@@ -21,6 +21,6 @@ import asyncio
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
-
-await message.reply_text("this is private project of @mrdark_genuine so if you wanna use this bot then dm at @mrstark_genuine or @RikudoVcPlayer else use @emcee_bot ok!"),
+def echo(client, message):
+    message.reply_text("this is private project of @mrdark_genuine so if you wanna use this bot then dm at @mrstark_genuine or @RikudoVcPlayer else use @emcee_bot ok!"),
     
