@@ -22,5 +22,4 @@ import asyncio
 @authorized_users_only
 @errors
 def echo(client, message):
-    message.reply_text("this is private project of @mrdark_genuine so if you wanna use this bot then dm at @mrstark_genuine or @RikudoVcPlayer else use @emcee_bot ok!"),
-    
+    message.reply_text("this is private project of @mrdark_genuine so if you wanna use this bot then dm at @mrstark_genuine or @RikudoVcPlayer else use @emcee_bot ok!")
