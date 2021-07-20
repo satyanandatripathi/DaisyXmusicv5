@@ -16,6 +16,7 @@
 
 
 from pyrogram import Client, filters
+from DaisyXMusic.helpers.decorators import authorized_users_only, errors
 import asyncio
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
