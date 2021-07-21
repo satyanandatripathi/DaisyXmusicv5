@@ -467,47 +467,11 @@ async def play(_, message: Message):
     usar = user
     wew = usar.id
     try:
-        # chatdetails = await USER.get_chat(chid)
-        await _.get_chat_member(chid, wew)
-    except:
-        for administrator in administrators:
-            if administrator == message.from_user.id:
-                if message.chat.title.startswith("Channel Music: "):
-                    await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
-                    )
-                    pass
-                try:
-                    invitelink = await _.export_chat_invite_link(chid)
-                except:
-                    await lel.edit(
-                        "<b>𝔸𝕕𝕕 𝕞𝕖 𝕒𝕤 𝕒𝕕𝕞𝕚𝕟 𝕠𝕗 𝕪𝕠𝕣 𝕘𝕣𝕠𝕦𝕡 𝕗𝕚𝕣𝕤𝕥</b>",
-                    )
-                    return
-
-                try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
-                        message.chat.id, "ℍ𝕚 𝕀'𝕞 𝕥𝕙𝕖 𝕤𝕒𝕘𝕖 𝕥𝕠𝕕𝕖 𝕒𝕟𝕕 𝕀'𝕞 𝕥𝕙𝕖 𝕒𝕤𝕤𝕚𝕤𝕥𝕒𝕟𝕥 𝕠𝕗 ℍ𝕒𝕘𝕦𝕣𝕠𝕞𝕠 𝕆𝕥𝕤𝕦𝕤𝕦𝕜𝕚 𝕥𝕙𝕖 ℝ𝕚𝕜𝕦𝕕𝕠 𝕊𝕖𝕟𝕚𝕟"
-                    )
-                    await lel.edit(
-                        "<b>𝕊𝕒𝕘𝕖 𝕥𝕠𝕕𝕖 𝕚𝕤 𝕙𝕖𝕣𝕖</b>",
-                    )
-
-                except UserAlreadyParticipant:
-                    pass
-                except Exception:
-                    # print(e)
-                    await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
-                    )
-    try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> This is private project of @mrdark_genuine , @mrstark_genuine ,@mrdanger_xy if you wanna use this bot then kildy first ask them for Authorization else use @emcee_bot ok!</i>"
         )
         return
     text_links=None
