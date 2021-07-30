@@ -193,6 +193,8 @@ def r_ply(type_):
             ],
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
+                InlineKeyboardButton("Owner 🦚", url="http://t.me/mrstrange_genuine"),
+                InlineKeyboardButton("Support", url="http://t.me/menotdeveloper"),
             ],
             [InlineKeyboardButton("❌ Close", "cls")],
         ]
@@ -410,6 +412,8 @@ async def m_cb(b, cb):
                 ],
                 [
                     InlineKeyboardButton("Playlist 📖", "playlist"),
+                    InlineKeyboardButton("Owner 🦚", url="http://t.me/mrstrange_genuine"),
+                    InlineKeyboardButton("Support", url="http://t.me/menotdeveloper"),
                 ],
                 [InlineKeyboardButton("❌ Close", "cls")],
             ]
@@ -471,11 +475,11 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> This is private project of @mrdark_genuine , @mrstark_genuine ,@mrdanger_xy if you wanna use this bot then kildy first ask them for Authorization else use @emcee_bot ok!</i>"
+            f"<i> musicbot of Rikudo senin isn't free / public project so if you wanna use it the pay 1$/month to @mrstrange_genuine or if you believe you're our friend then kindly dm at @mrstark_genuine or @mrdanger_xy </i>"
         )
         return
     text_links=None
-    await lel.edit("🔎 𝔹𝕖 𝕡𝕒𝕥𝕚𝕖𝕟𝕥 𝕀'𝕞 𝕗𝕚𝕟𝕕𝕚𝕟𝕘 𝕦𝕣 𝕤𝕠𝕟𝕘")
+    await lel.edit("Rukja bhosdk dhundh raha hu gana")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -578,7 +582,7 @@ async def play(_, message: Message):
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
-          results = YoutubeSearch(query, max_results=5).to_dict()
+          results = YoutubeSearch(query, max_results=10).to_dict()
         except:
           await lel.edit("Give me something to play")
         # Looks like hell. Aren't it?? FUCK OFF
@@ -586,13 +590,13 @@ async def play(_, message: Message):
             toxxt = "**𝕊𝕖𝕝𝕖𝕔𝕥 𝕥𝕙𝕖 𝕤𝕠𝕟𝕘 𝕪𝕠𝕦 𝕨𝕒𝕟𝕥 𝕥𝕠 𝕡𝕝𝕒𝕪**\n\n"
             j = 0
             useer=user_name
-            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
+            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣,"9️⃣","🔟"]
 
             while j < 5:
                 toxxt += f"{emojilist[j]} [Title - {results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ╚ **𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟** - {results[j]['duration']}\n"
-                toxxt += f" ╚ **𝕍𝕚𝕖𝕨𝕤** - {results[j]['views']}\n"
-                toxxt += f" ╚ **ℂ𝕣𝕖𝕒𝕥𝕠𝕣** - {results[j]['channel']}\n\n"
+                toxxt += f" >> **𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟** - {results[j]['duration']}\n"
+                toxxt += f" >> **𝕍𝕚𝕖𝕨𝕤** - {results[j]['views']}\n"
+                toxxt += f" >> **ℂ𝕣𝕖𝕒𝕥𝕠𝕣** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -601,10 +605,15 @@ async def play(_, message: Message):
                         InlineKeyboardButton("1️⃣", callback_data=f'plll 0|{query}|{user_id}'),
                         InlineKeyboardButton("2️⃣", callback_data=f'plll 1|{query}|{user_id}'),
                         InlineKeyboardButton("3️⃣", callback_data=f'plll 2|{query}|{user_id}'),
-                    ],
-                    [
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
+                    ],
+                    [
+                        InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
+                        InlineKeyboardButton("7️⃣", callback_data=f'plll 6|{query}|{user_id}'),
+                        InlineKeyboardButton("8️⃣", callback_data=f'plll 7|{query}|{user_id}'),
+                        InlineKeyboardButton("9️⃣", callback_data=f'plll 8|{query}|{user_id}'),
+                        InlineKeyboardButton("🔟", callback_data=f'plll 9|{query}|{user_id}'),
                     ],
                     [InlineKeyboardButton(text="❌", callback_data="cls")],
                 ]
@@ -614,7 +623,7 @@ async def play(_, message: Message):
             return
             # Returning to pornhub
         except:
-            await lel.edit("No Enough results to choose.. Starting direct play..")
+            await lel.edit("Bhenchod results hi nai mile diract bajana hoga ab")
                         
             # print(results)
             try:
@@ -728,17 +737,6 @@ async def ytplay(_, message: Message):
                     )
                     return
 
-                try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
-                    )
-                    await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
-                    )
-
-                except UserAlreadyParticipant:
-                    pass
                 except Exception:
                     # print(e)
                     await lel.edit(
@@ -750,7 +748,7 @@ async def ytplay(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> musicbot of Rikudo senin isn't free / public project so if you wanna use it the pay 1$/month to @mrstrange_genuine or if you believe you're our friend then kindly dm at @mrstark_genuine or @mrdanger_xy</i>"
         )
         return
     await lel.edit("🔎 **Finding**")
@@ -875,17 +873,6 @@ async def deezer(client: Client, message_: Message):
                     )
                     return
 
-                try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
-                        message_.chat.id, "I joined this group for playing music in VC"
-                    )
-                    await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
-                    )
-
-                except UserAlreadyParticipant:
-                    pass
                 except Exception:
                     # print(e)
                     await lel.edit(
@@ -897,7 +884,7 @@ async def deezer(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i>musicbot of Rikudo senin isn't free / public project so if you wanna use it the pay 1$/month to @mrstrange_genuine or if you believe you're our friend then kindly dm at @mrstark_genuine or @mrdanger_xy </i>"
         )
         return
     requested_by = message_.from_user.first_name
@@ -936,7 +923,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
 
             ],
-            [InlineKeyboardButton(text="", url=f"{url}")],
+            [InlineKeyboardButton(text="link", url=f"{url}")],
             [InlineKeyboardButton(text="❌ ℂ𝕝𝕠𝕤𝕖", callback_data="cls")],
         ]
     )
@@ -1014,29 +1001,18 @@ async def jiosaavn(client: Client, message_: Message):
                     )
                     return
 
-                try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
-                        message_.chat.id, "I joined this group for playing music in VC"
-                    )
-                    await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
-                    )
-
-                except UserAlreadyParticipant:
-                    pass
                 except Exception:
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @RikudoVcPlayer to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            "<i> musicbot of Rikudo senin isn't free / public project so if you wanna use it the pay 1$/month to @mrstrange_genuine or if you believe you're our friend then kindly dm at @mrstark_genuine or @mrdanger_xy </i>"
         )
         return
     requested_by = message_.from_user.first_name
@@ -1142,7 +1118,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
         return
-    await cb.message.edit("Hang On... Player Starting")
+    await cb.message.edit("Rukja baja raha hu bhosdk")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1178,6 +1154,7 @@ async def lol_cb(b, cb):
             [
                 InlineKeyboardButton("📖 ℙ𝕝𝕒𝕪𝕝𝕚𝕤𝕥", callback_data="playlist"),
                 InlineKeyboardButton("𝕄𝕖𝕟𝕦 ⏯ ", callback_data="menu"),
+                InlineKeyboardButton(text="Owner 🦚", url="http://t.me/mrstrange_genuine"),
             ],
             [
                 InlineKeyboardButton(text="🎬 𝕐𝕠𝕦𝕋𝕙𝕦𝕓𝕖", url=f"{url}"),
