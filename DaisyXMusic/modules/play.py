@@ -967,20 +967,7 @@ async def jiosaavn(client: Client, message_: Message):
                         "<b>Remember to add helper to your channel</b>",
                     )
                     pass
-                try:
-                    invitelink = await client.export_chat_invite_link(chid)
-                except:
-                    await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
-                    )
-                    return
 
-                except Exception:
-                    # print(e)
-                    await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @RikudoVcPlayer to your Group and try again</b>",
-                    )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
