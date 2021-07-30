@@ -23,4 +23,4 @@ import asyncio
 @authorized_users_only
 @errors
 async def echo(client, message):
-    await message.reply_text("this is private project of @mrdark_genuine so if you wanna use this bot then dm at @mrstark_genuine or @RikudoVcPlayer else use @emcee_bot ok!")
+    await message.reply_text("musicbot of Rikudo senin isn't free / public project so if you wanna use it the pay 1$/month to @mrstrange_genuine or if you believe you're our friend then kindly dm at @mrstark_genuine or @mrdanger_xy")
