@@ -592,7 +592,7 @@ async def play(_, message: Message):
             useer=user_name
             randibot = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣","🔟",]
 
-            while j < 5:
+            while j < 10:
                 toxxt += f"{emojilist[j]} [Title - {results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" >> **𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟** - {results[j]['duration']}\n"
                 toxxt += f" >> **𝕍𝕚𝕖𝕨𝕤** - {results[j]['views']}\n"
