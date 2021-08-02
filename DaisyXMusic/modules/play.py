@@ -587,16 +587,16 @@ async def play(_, message: Message):
           await lel.edit("Give me something to play")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**𝕊𝕖𝕝𝕖𝕔𝕥 𝕥𝕙𝕖 𝕤𝕠𝕟𝕘 𝕪𝕠𝕦 𝕨𝕒𝕟𝕥 𝕥𝕠 𝕡𝕝𝕒𝕪**\n\n"
+            toxxt = "**Select the song you want to play**\n\n"
             j = 0
             useer=user_name
-            randibot = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
+            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
 
             while j < 5:
-                toxxt += f"{emojilist[j]} [Title - {results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" >> **𝔻𝕦𝕣𝕒𝕥𝕚𝕠𝕟** - {results[j]['duration']}\n"
-                toxxt += f" >> **𝕍𝕚𝕖𝕨𝕤** - {results[j]['views']}\n"
-                toxxt += f" >> **ℂ𝕣𝕖𝕒𝕥𝕠𝕣** - {results[j]['channel']}\n\n"
+                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
+                toxxt += f" ╚ <b>Duration</b> - {results[j]['duration']}\n"
+                toxxt += f" ╚ <b>Views</b> - {results[j]['views']}\n"
+                toxxt += f" ╚ <b>Channel</b> - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -610,7 +610,6 @@ async def play(_, message: Message):
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                 
                     [InlineKeyboardButton(text="❌", callback_data="cls")],
                 ]
             )       
@@ -619,9 +618,8 @@ async def play(_, message: Message):
             return
             # Returning to pornhub
         except:
-            await lel.edit("Bhenchod results hi nai mile diract bajana hoga ab")
+            await lel.edit("No Enough results to choose.. Starting direct play..")
                         
-            # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
                 title = results[0]["title"][:40]
