@@ -193,8 +193,8 @@ def r_ply(type_):
             ],
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
-                InlineKeyboardButton("Owner 🦚", url="http://t.me/mrstrange_genuine"),
-                InlineKeyboardButton("Support", url="http://t.me/menotdeveloper"),
+                InlineKeyboardButton("Owner 🦚", url="http://t.me/emcee_devs"),
+                InlineKeyboardButton("Support", url="http://t.me/emcee_support"),
             ],
             [InlineKeyboardButton("❌ Close", "cls")],
         ]
