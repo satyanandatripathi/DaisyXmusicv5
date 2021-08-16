@@ -19,13 +19,41 @@ import os
 from os import getenv
 
 from dotenv import load_dotenv
+import os
+import re
+from youtube_dl import YoutubeDL
 
 if os.path.exists("local.env"):
     load_dotenv("local.env")
 
+
+ydl_opts = {
+    "geo-bypass": True,
+    "nocheckcertificate": True
+    }
+ydl = YoutubeDL(ydl_opts)
+links=[]
+finalurl=""
+STREAM=os.environ.get("STREAM_URL", "https://eu10.fastcast4u.com/clubfmuae")
+regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
+match = re.match(regex,STREAM)
+if match:
+    meta = ydl.extract_info(STREAM, download=False)
+    formats = meta.get('formats', [meta])
+    for f in formats:
+        links.append(f['url'])
+    finalurl=links[0]
+else:
+    finalurl=STREAM
+
+
+    
+
 que = {}
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
+ADMIN = os.environ.get("ADMINS", '')
+ADMINS = [int(admin) if re.search('^\d+$', admin) else admin for admin in (ADMIN).split()]
 BOT_NAME = getenv("BOT_NAME")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "DaisyXupdates")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/dcfdf612e499eef0e0b1f.png")
